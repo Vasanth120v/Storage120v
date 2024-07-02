@@ -1,0 +1,37 @@
+package world;
+
+import java.util.Scanner;
+
+public class one{
+
+public static void main(String[] args){
+
+      //Count of vowels in a given String
+
+        Scanner input = new Scanner(System.in);
+       
+        System.out.println("Enter a string to find vowels in it: ");
+        String take = input.nextLine();
+          
+        int vCount =0;
+        int cCount =0;
+       
+        for(int i=0; i<take.length(); i++){
+        	if(take.charAt(i) != ' ') {            
+            if(take.charAt(i) == 'a' || take.charAt(i) == 'e' || take.charAt(i) == 'i' || take.charAt(i) == 'o' || take.charAt(i) == 'u')
+              {
+                 vCount++;
+              }
+              
+            else
+              {      
+                 cCount++;
+              }
+        	}
+       }
+        
+      System.out.println("Vowel count: "+vCount);
+      System.out.println("Consonant count: "+cCount);
+
+    }
+}

@@ -1,0 +1,42 @@
+ package world;
+
+ import java.util.Scanner;
+public class one{
+   public static void main(String[] args){
+        
+	   // Return next 5 alphabets for the given alphabet:
+	   
+	   Scanner input = new Scanner(System.in);
+	   System.out.println("Enter an Alphabet to get next 5: ");
+	   char userValue = input.next().charAt(0);
+	   
+	   int point = (char) userValue;
+	   
+	   nextFive(point);
+	   
+   }
+   
+   public static void nextFive(int letter) {
+	    
+	   for(int i = 0; i < 5; i++ ) {
+	    letter++;
+	   if(letter > 90 && letter < 96) {
+		   
+		   letter = 65;
+		   System.out.println((char) letter);
+		  
+	   }
+	   
+	   else if(letter > 122 && letter < 127) {
+		   
+		   letter = 97;
+		   System.out.println((char) letter);
+		  
+	   }
+	   
+	   else {
+		   System.out.println((char) letter);
+	   }
+	   } 
+   }
+}

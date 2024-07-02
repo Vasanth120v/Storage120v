@@ -1,0 +1,25 @@
+// Count of words in a String
+    	
+    	Scanner input = new Scanner(System.in);
+    	String take = input.nextLine();
+    	
+    	int word = 0;
+    	
+    	try {
+    	for(int i=0; i<=take.length(); i++) {
+    		
+           if(take.charAt(i) == ' ') {
+        	  
+    			i++;
+    			if(take.charAt(i) != ' ') {
+    		word++;
+    			}
+    	}
+    	}
+    	}
+    	
+    	catch(StringIndexOutOfBoundsException e) {
+    		word += 1;
+    		System.out.println("The word count in the given String: "+word);
+    	}
+    	

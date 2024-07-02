@@ -1,0 +1,12 @@
+public class Person{
+
+public static void main(String[] args){
+  
+Scanner input = new Scanner(System.in);
+do{
+System.out.println("You can enter numbers until its sum reach 100: ");
+n = input.nextInt();
+}while(n<=100);
+
+}
+}

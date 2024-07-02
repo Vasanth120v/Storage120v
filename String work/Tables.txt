@@ -1,0 +1,37 @@
+package world;
+import java.util.Scanner;
+
+
+class one {
+	
+	public static void main(String[] args) {
+      
+		userValue();
+}
+	
+	public static void userValue() {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the value of Table: ");
+		int table = input.nextInt();
+		
+		System.out.println("Enter the end value of Table: ");
+		int end  = input.nextInt();
+		
+		tables(table,end);
+	}
+
+	
+	public static void tables(int t, int e) {
+		
+		for(int i=1; i<=e; i++) {
+			int r = t * i;
+			
+			print(t,i,r);
+		}
+	}
+		
+	public static void print(int t,int i, int r) {
+		System.out.println(t+"*"+i+"="+r);
+	}
+}

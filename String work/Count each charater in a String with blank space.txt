@@ -1,0 +1,25 @@
+package world;
+
+import java.util.Scanner;
+
+public class one{
+
+public static void main(String[] args){
+
+    // Count each character in given String
+	
+	     Scanner input = new Scanner(System.in);
+	     String take = input.nextLine();
+	     
+	     int count =0;
+	     for(int i=0; i<take.length(); i++) {
+	    	 count++;
+	     }
+	     
+	     System.out.println("Total Number of Characters in the given String including blanks: "+count);
+	
+	
+     }
+	  
+	  
+    }

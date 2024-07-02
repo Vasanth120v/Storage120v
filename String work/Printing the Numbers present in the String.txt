@@ -1,0 +1,24 @@
+package world;
+
+import java.util.Scanner;
+
+public class one{
+
+public static void main(String[] args){
+
+     // Printing only the numbers present in a String
+	
+	  Scanner input = new Scanner(System.in);
+	  System.out.println("Enter a String to find numbers in it: ");
+	  String take = input.nextLine();
+	  
+     System.out.println("Numbers present in String: ");
+     for(int i=0; i<take.length(); i++) {
+    	 if(Character.isDigit(take.charAt(i))){
+    		 System.out.print(take.charAt(i));
+    	 }
+     }
+	  
+	  
+    }
+}

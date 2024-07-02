@@ -1,0 +1,31 @@
+package world;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class one {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String take = input.nextLine().toLowerCase(); // Convert to lowercase
+        int dup = 0;
+
+        // Set to keep track of characters seen so far
+        Set<Character> seen = new HashSet<>();
+
+        for (int i = 0; i < take.length(); i++) {
+            char currentChar = take.charAt(i);
+            // Check if character has been seen before
+            if (seen.contains(currentChar)) {
+                System.out.println("Duplicate found for: " + currentChar);
+                dup++;
+            } else {
+                seen.add(currentChar); // Add character to set
+            }
+        }
+
+        if (dup == 0) {
+            System.out.println("No Duplicate found!");
+        }
+    }
+}

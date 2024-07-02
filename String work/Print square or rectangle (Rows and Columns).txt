@@ -1,0 +1,32 @@
+package world;
+
+import java.util.Scanner;
+
+class one{
+	public static void main(String[] args) {
+
+           getUserValue();
+	}
+	
+	public static void getUserValue() {
+	   Scanner input = new Scanner(System.in);
+	   
+	   System.out.println("Enter the number of Rows: ");
+	   int row = input.nextInt();
+	   
+	   System.out.println("Enter the number of Columns: ");
+	   int column = input.nextInt();
+	   
+	   shape(row,column);
+	}
+	
+	public static void shape(int r, int c) {
+		
+		for(int i=1; i<=r; i++) {
+			for(int j=1; j<=c; j++) {
+				System.out.print(" * ");
+			}
+			System.out.println();
+		}
+	}
+}
