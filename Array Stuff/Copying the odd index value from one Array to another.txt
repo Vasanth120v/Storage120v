@@ -1,0 +1,26 @@
+package world;
+import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+public class one{
+	public static void main(String[] args) {
+		
+		//Copying the odd indexed values from one Array to another
+		
+		int a[] = {1,2,7,9,2,4,0,23,89,12};
+		System.out.println(Arrays.toString(a));
+		
+		ArrayList<Integer> b = new ArrayList<Integer>();
+		
+		for(int i=0; i<a.length; i++) {
+			if(i % 2 != 0) {
+				b.add(a[i]);
+			}
+		}
+		System.out.println("Odd index values stored in Array B: ");
+		System.out.println(b);
+		
+	}
+}

@@ -1,0 +1,28 @@
+package world;
+import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+public class one{
+	public static void main(String[] args) {
+		
+		// Moving all elements towards left twice in a given Array
+		
+		int[] a = {0,1,2,3,4,5};
+		System.out.println(Arrays.toString(a));
+		
+		int f = a[0];
+		int s = a[1];
+		
+		for(int i=2; i<a.length; i++) {
+			a[i-2] = a[i];
+		}
+		 a[a.length-1] = s;
+		 a[a.length-2] = f;
+		
+		
+		System.out.println("After shifting twice towards left: ");
+		System.out.println(Arrays.toString(a));
+	}
+}

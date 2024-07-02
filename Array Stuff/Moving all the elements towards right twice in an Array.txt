@@ -1,0 +1,27 @@
+package world;
+import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+public class one{
+	public static void main(String[] args) {
+		
+		// Moving all elements towards Right twice in a given Array
+		
+		int[] a = {0,1,2,3,4,5};
+		System.out.println(Arrays.toString(a));
+		
+		int l = a.length-1;
+		int s = a.length-2;
+		
+		for(int i= a.length-3; i>=0; i--) {
+			a[i+2] = a[i];
+		}
+		
+		a[0] = s;
+		a[1] = l;
+		
+		System.out.println(Arrays.toString(a));
+	}
+}

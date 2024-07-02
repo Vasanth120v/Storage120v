@@ -1,0 +1,40 @@
+package world;
+import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class one{
+	public static void main(String[] args) {
+		
+		//Printing values between adjacent two elements in a given array
+		
+		int a[] = {1,2,3,45,6,8};
+		System.out.println(Arrays.toString(a));
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the Starting value to find the inbetween numbers: ");
+		int start = input.nextInt();
+		
+	    System.out.println("Enter the Ending value to find the inbetween numbers: ");
+	    int end = input.nextInt();
+	    
+	    System.out.println("Adjacent value between "+start+" & "+end+": ");
+	    
+	    for(int j=0; j<a.length; j++) {
+	    	if(a[j] == start) {
+	    		start = j;
+	    	}
+	    	if(a[j] == end) {
+	    		end = j;
+	    	}
+	    }
+	    
+	    for(int i=start+1; i<end; i++) {
+	    	System.out.println(a[i]);
+	    }
+		
+	}
+}

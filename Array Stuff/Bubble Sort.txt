@@ -1,0 +1,33 @@
+package world;
+
+import java.util.Scanner;
+
+import javax.sound.midi.SysexMessage;
+
+import java.util.Arrays;
+import java.util.InputMismatchException;
+
+public class Person{
+
+public static void main(String[] args){
+	
+	// 1.Bubble sort to place the first largest element in the last position
+
+int a[] = {34,21,54,32,89,20,90};
+
+
+for(int i=0; i<a.length-1; i++){
+
+for(int j=0; j<a.length-1-i; j++){
+
+if( a[j] > a[j+1] ){
+
+a[j] += a[j+1];
+a[j+1] = a[j] - a[j+1];
+a[j] -= a[j+1];
+}
+}
+}
+System.out.println(Arrays.toString(a));
+}
+}

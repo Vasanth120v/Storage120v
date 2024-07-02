@@ -1,0 +1,25 @@
+package world;
+import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+public class one{
+	public static void main(String[] args) {
+		
+		// Moving all elements towards Right in a given Array
+		
+		int[] a = {0,1,2,3,4,5};
+		System.out.println(Arrays.toString(a));
+		
+		int b = a[a.length-1];
+		
+		for(int i=a.length-2; i>=0; i--) {
+			a[i+1]=a[i];
+		}
+		a[0] = b;
+		
+		System.out.println(Arrays.toString(a));
+		
+	}
+}

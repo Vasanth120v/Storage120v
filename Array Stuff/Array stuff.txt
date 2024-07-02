@@ -1,0 +1,163 @@
+package fine;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+import java.util.ArrayList;
+
+public class ok{
+	public static void main(String[] args){	
+		
+		// 1.Array Declaration and Assigning values:
+		int a[] = {1,2,3,4,5,6};   
+		
+	//2. print values in array using for
+		System.out.println("Using for printing values in an Array:");
+		for(int b : a) {
+			
+			System.out.println(b);
+		}
+		
+		// print values in array by String conversion:
+		
+		System.out.println("Using String conversion printing values in an Array:" );
+		
+		System.out.println(Arrays.toString(a)+"\n");
+		
+		// 3.Reverse the order of values in an Array:
+		System.out.println("Printing values of an Array in Reverse order using for:" );
+
+	    for(int i=a.length; i>=1; i--) {
+	    	System.out.println(i);
+	    }
+	    
+	    
+	    
+	    
+	    //4. Finding Index value of given number from an array:
+	    
+	    System.out.println("Enter a number to check if it's available in Array a: ");
+	    
+	    Scanner input = new Scanner(System.in);
+	    int num = input.nextInt();
+	    
+	    for(int i=0; i< a.length; i++) {
+	    	if(a[i] == num)
+	    	{
+	    		System.out.println("The given Number "+num+" is available at index:"+ i+"\n");
+	    	}
+	    	
+	    }
+	    
+	    
+	    //4. Linear Search:
+	     
+	     int storage[] = {1,2,54,6,7,4};
+	          
+	     System.out.println("Array Storage contains: "+Arrays.toString(storage));
+	     System.out.println("Choose anyone value from above: ");
+	     
+	     int take = input.nextInt();
+	     
+	     for(int i=0; i<= storage.length; i++) {
+	    	if(take == storage[i]) {
+	    		System.out.println("Found the Number "+take+" at Index:"+i+"\n");
+	    		break;
+	    	}
+	    	
+	     }
+	    
+	    // 5. Remove the given number from an Array C:
+	    
+	    
+	     ArrayList<Integer> c = new ArrayList();
+	     c.add(12);
+	     c.add(24);
+	     c.add(54);
+	     c.add(98);
+	     c.add(71);
+	     c.add(32);
+	    
+	     	     
+	     System.out.println("Available numbers to remove from the Array C:");
+	     System.out.println(c);
+	     
+	     System.out.println("Enter any number from above Array C to remove: ");
+	     int remNum = input.nextInt();
+	    
+	     for(int i=0; i<= c.size(); i++) {
+	    	 int presentValue = c.get(i);
+	    	 if(presentValue == remNum) 
+	    	 {
+	    		 c.remove(i);
+	    		 break;
+	    	 }
+	     }
+	    
+	     System.out.println("After removal of the given Number from Array C: "+c+"\n");
+	    
+	   
+	    
+	     
+	     // 6.Insert an element at the last index of an Array:
+	     
+	     
+	     System.out.println("Please Enter a value to insert at the last index of an Array: ");
+	     
+	     int give = input.nextInt();
+	     
+	     c.add(give);
+	     System.out.println("After insertion of "+give+" at last index"+c+"\n");
+	     
+	     //7. Occurrence count of an element present in an Array:
+	     
+	     
+	     System.out.println("To check occurrence of the number in an Array Space: ");
+	     int space[]= {12,32,45,12,32};
+	     System.out.println(Arrays.toString(space));
+			
+			for(int i=0; i<space.length; i++) {
+				int count=1;
+				int numPoint=space[i];
+				for(int j=i+1; j<space.length; j++) {
+					if(space[i]== space[j]) {
+						numPoint = space[i];
+						count++;
+					}
+				}
+				
+				System.out.println("Number: " +numPoint+ " Occurrence: "+ count);
+			}
+			System.out.println("\n");
+			
+			//8. Finding the Biggest number in an Array:
+			System.out.println("To find the Biggest number  in the Array: name");
+			int name[] = {36,89,12,1,2,5};
+			System.out.println(Arrays.toString(name));
+
+		     for(int i=0; i<name.length; i++) {
+		    	 for(int j=i+1; j<name.length; j++) {
+		    		 if(name[i] < name[j]) {
+		    			 name[i] = name[i]+name[j];
+		    			 name[j] = name[i]-name[j];
+		    			 name[i] = name[i]-name[j];
+		    		 }
+		    	 }
+
+		     }
+	    	 System.out.println("The bigger number in array name is: "+name[0]);
+             System.out.println("\n");
+	    	 
+          //9.Finding the smallest number in an Array:
+	    	 System.out.println("To find the smallest number in the Array: name");
+	    	 
+	    	 System.out.println(Arrays.toString(name));
+	    	 System.out.println("The smallest number in Array name is: "+name[name.length-1]+"\n");
+	     
+	     
+	    
+	    
+		
+	}	
+}
